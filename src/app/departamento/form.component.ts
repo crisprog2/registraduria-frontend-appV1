@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Departamento } from './departamento';
 import { DepartamentoService } from './departamento.service';
+import swal from 'sweetalert2'
 
 @Component({
   selector: 'app-form',
@@ -20,7 +21,10 @@ export class FormComponent implements OnInit {
 
   public create(): void{
     this.departamentoService.create(this.departamento).subscribe(
-      response =>this.router.navigate(['/departamentos'])
+      departamento => {
+        this.router.navigate(['/departamentos'])
+        swal.fire('Nuevo Departamento', `Departamento ${departamento.departamento} creado con exito`, 'success')
+      }
     )
   }
 

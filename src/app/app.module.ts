@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DepartamentoComponent } from './departamento/departamento.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DepartamentoService } from './departamento/departamento.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { DepartamentoComponent } from './departamento/departamento.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DepartamentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

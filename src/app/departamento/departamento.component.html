@@ -1,1 +1,19 @@
-<p>departamento works!</p>
+<div class="card border-primary mb-3">
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de departamentos</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Codigo Departamento</th>
+          <th>Departamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let departamento of departamentos">
+          <td>{{ departamento.codDepartamento }}</td>
+          <td>{{ departamento.departamento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

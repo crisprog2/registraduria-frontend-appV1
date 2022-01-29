@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { DepartamentoComponent } from './departamento/departamento.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DepartamentoService } from './departamento/departamento.service';
+import { FormComponent } from './departamento/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { DepartamentoService } from './departamento/departamento.service';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DepartamentoComponent
+    DepartamentoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [DepartamentoService],

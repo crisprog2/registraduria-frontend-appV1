@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DepartamentoComponent } from './departamento/departamento.component';
 import { FormComponent } from './departamento/form.component';
+import { ConsultarComponent } from './departamento/consultar.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
   {path: 'departamentos', component: DepartamentoComponent},
-  {path: 'departamentos/form', component: FormComponent}
+  {path: 'departamentos/consultar', component: ConsultarComponent},
+  {path: 'departamentos/form', component: FormComponent},
+  {path: 'departamentos/form/:id', component: FormComponent}
 ];
 
 @NgModule({

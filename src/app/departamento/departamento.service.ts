@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs';
 import { Departamento } from './departamento';
@@ -17,7 +16,7 @@ export class DepartamentoService {
 
   constructor(private http: HttpClient) { }
 
-  getDepartamentos(): Observable<Departamento[]>{
+  getDepartamentos() : Observable<Departamento[]>{
     return this.http.get(this.urlEndPoint).pipe(
       map( (response) => response as Departamento[])
     );
@@ -25,6 +24,14 @@ export class DepartamentoService {
 
   create(departamento: Departamento) : Observable<Departamento> {
     return this.http.post<Departamento>(this.urlEndPointCreate, departamento, {headers: this.httpHeaders})
+  }
+
+  getDepartamento(id: any) : Observable<Departamento>{
+    return this.http.get<Departamento>(`${this.urlEndPointCreate}/${id}`);
+  }
+
+  updateDepartamento(departamento: Departamento) : Observable<Departamento>{
+    return this.http.put<Departamento>(`${this.urlEndPointCreate}/${departamento.codDepartamento}`, departamento, {headers: this.httpHeaders});
   }
 
 }

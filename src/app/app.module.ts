@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DepartamentoService } from './departamento/departamento.service';
 import { FormComponent } from './departamento/form.component';
 import { FormsModule } from '@angular/forms';
+import { ConsultarComponent } from './departamento/consultar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     DepartamentoComponent,
-    FormComponent
+    FormComponent,
+    ConsultarComponent
   ],
   imports: [
     BrowserModule,

@@ -2,13 +2,14 @@
   <div class="card-header">{{ titulo }}</div>
   <div class="card-body">
 
-    <form (ngSubmit)="create()">
+    <form>
       <div class="form-group row">
         <label for="codDepartamento" class="col-form-label col-sm-2">Cod Departamento</label>
         <div class="col-sm-6">
           <input type="text" class="form-control" [(ngModel)]="departamento.codDepartamento" name="codDepartamento">
         </div>
       </div>
+      <hr>
       <div class="form-group row">
         <label for="departamento" class="col-form-label col-sm-2">Departamento</label>
         <div class="col-sm-6">
@@ -18,7 +19,10 @@
       <hr>
       <div class="form-group row">
         <div class="col-sm-6">
-          <button class="btn btn-primary" role="button">Crear Departamento</button>
+          <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!departamento.codDepartamento;else elseBlock">Crear Departamento</button>
+          <ng-template #elseBlock>
+            <button class="btn btn-primary" role="button" (click)='updateDepartamento()'>Actualizar Departamento</button>
+          </ng-template>
         </div>
       </div>
 

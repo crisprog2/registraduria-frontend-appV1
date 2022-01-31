@@ -2,6 +2,14 @@
   <div align="center">
     <label class="col-sm-2 col-form-label">Codigo Departamento</label> <input
         type="text" name="codDepartamento" class="form-control col-sm-2" [(ngModel)]="departamento.codDepartamento" />
-    <br> <button class="btn btn-primary" type="button" name="button" [routerLink]="['/departamentos/form', departamento.codDepartamento]">Consultar</button>
+    <br>
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <button class="btn btn-info" type="button" name="button" [routerLink]="['/departamentos/form', departamento.codDepartamento]">Editar</button>
+      </div>
+      <div class="col-sm-6">
+        <button class="btn btn-danger" type="button" name="button" [routerLink]="['/departamentos/eliminar', departamento.codDepartamento]">Eliminar</button>
+      </div>
+    </div>
   </div>
 </div>

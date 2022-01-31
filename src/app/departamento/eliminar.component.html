@@ -1,0 +1,29 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">{{ titulo }}</div>
+  <div class="card-body">
+
+    <form>
+      <div class="form-group row">
+        <label for="codDepartamento" class="col-form-label col-sm-2">Cod Departamento</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="departamento.codDepartamento" name="codDepartamento" contenteditable="false" disabled="disabled">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <label for="departamento" class="col-form-label col-sm-2">Departamento</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="departamento.departamento" name="departamento" contenteditable="false" disabled="disabled">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button" (click)='deleteDepartamento()'>Eliminar Departamento</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

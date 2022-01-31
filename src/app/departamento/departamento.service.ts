@@ -34,4 +34,8 @@ export class DepartamentoService {
     return this.http.put<Departamento>(`${this.urlEndPointCreate}/${departamento.codDepartamento}`, departamento, {headers: this.httpHeaders});
   }
 
+  deleteDepartamento(id: any): Observable<Departamento>{
+    return this.http.delete<Departamento>(`${this.urlEndPointCreate}/${id}`, {headers: this.httpHeaders})
+  }
+
 }

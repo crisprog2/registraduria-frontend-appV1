@@ -12,6 +12,7 @@ import { DepartamentoService } from './departamento/departamento.service';
 import { FormComponent } from './departamento/form.component';
 import { FormsModule } from '@angular/forms';
 import { ConsultarComponent } from './departamento/consultar.component';
+import { EliminarComponent } from './departamento/eliminar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ConsultarComponent } from './departamento/consultar.component';
     HomeComponent,
     DepartamentoComponent,
     FormComponent,
-    ConsultarComponent
+    ConsultarComponent,
+    EliminarComponent
   ],
   imports: [
     BrowserModule,

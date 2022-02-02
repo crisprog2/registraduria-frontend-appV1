@@ -15,7 +15,7 @@ export class FormciudadComponent implements OnInit {
 
   departamentos: Departamento[] | undefined;
   public ciudad: Ciudad = new Ciudad();
-  public titulo: string="Crear/Actualizar Ciudad";
+  public titulo: string="Crear Ciudad";
 
   constructor(private departamentoService: DepartamentoService, private ciudadService: CiudadService, private router: Router, private activatedRoute: ActivatedRoute) { }
 

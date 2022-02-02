@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ciudad } from './ciudad';
 
 @Component({
   selector: 'app-consultar-ciudad',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultar-ciudad.component.css']
 })
 export class ConsultarCiudadComponent implements OnInit {
+
+  ciudad: Ciudad = new Ciudad();
 
   constructor() { }
 

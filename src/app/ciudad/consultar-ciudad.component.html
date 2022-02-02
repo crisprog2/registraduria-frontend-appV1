@@ -1,1 +1,16 @@
-<p>consultar-ciudad works!</p>
+<div class="container py-4">
+  <div align="center">
+    <label class="col-sm-2 col-form-label">Codigo Ciudad</label> <input
+        type="text" name="codDepartamento" class="form-control col-sm-2" [(ngModel)]="ciudad.codCiudad" />
+    <br>
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <button class="btn btn-info" type="button" name="button" [routerLink]="['/ciudades/form', ciudad.codCiudad]">Editar</button>
+      </div>
+
+      <div class="col-sm-6">
+        <button class="btn btn-danger" type="button" name="button" [routerLink]="['/departamentos/eliminar', ciudad.codCiudad]">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

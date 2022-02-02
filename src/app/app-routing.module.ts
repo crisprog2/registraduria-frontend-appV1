@@ -5,6 +5,7 @@ import { DepartamentoComponent } from './departamento/departamento.component';
 import { FormComponent } from './departamento/form.component';
 import { ConsultarComponent } from './departamento/consultar.component';
 import { EliminarComponent } from './departamento/eliminar.component';
+import { CiudadComponent } from './ciudad/ciudad.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes =[
   {path: 'departamentos/form', component: FormComponent},
   {path: 'departamentos/form/:id', component: FormComponent},
   {path: 'departamentos/eliminar/:id', component: EliminarComponent},
+  {path: 'ciudades', component: CiudadComponent},
 ];
 
 @NgModule({

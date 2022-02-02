@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { ConsultarComponent } from './departamento/consultar.component';
 import { EliminarComponent } from './departamento/eliminar.component';
 import { CiudadComponent } from './ciudad/ciudad.component';
+import { FormciudadComponent } from './ciudad/formciudad.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CiudadComponent } from './ciudad/ciudad.component';
     FormComponent,
     ConsultarComponent,
     EliminarComponent,
-    CiudadComponent
+    CiudadComponent,
+    FormciudadComponent
   ],
   imports: [
     BrowserModule,

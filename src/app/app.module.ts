@@ -18,6 +18,7 @@ import { FormciudadComponent } from './ciudad/formciudad.component';
 import { FormActualizarComponent } from './departamento/form-actualizar.component';
 import { FormActualizarCiudadComponent } from './ciudad/form-actualizar-ciudad.component';
 import { ConsultarCiudadComponent } from './ciudad/consultar-ciudad.component';
+import { EliminarCiudadComponent } from './ciudad/eliminar-ciudad.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConsultarCiudadComponent } from './ciudad/consultar-ciudad.component';
     FormciudadComponent,
     FormActualizarComponent,
     FormActualizarCiudadComponent,
-    ConsultarCiudadComponent
+    ConsultarCiudadComponent,
+    EliminarCiudadComponent
   ],
   imports: [
     BrowserModule,

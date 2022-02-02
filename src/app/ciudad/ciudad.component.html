@@ -1,1 +1,21 @@
-<p>ciudad works!</p>
+<div class="card border-primary mb-3">
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de ciudades</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Codigo Ciudad</th>
+          <th>Ciudad</th>
+          <th>Departamento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ciudad of ciudades">
+          <td>{{ ciudad.codCiudad }}</td>
+          <td>{{ ciudad.ciudad }}</td>
+          <td>{{ ciudad.departamento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

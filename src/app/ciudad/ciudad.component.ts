@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ciudad } from './ciudad';
+import { CiudadService } from './ciudad.service';
 
 @Component({
   selector: 'app-ciudad',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CiudadComponent implements OnInit {
 
-  constructor() { }
+  ciudades: Ciudad[] | undefined;
+
+  constructor(private ciudadService:CiudadService) { }
 
   ngOnInit(): void {
+    this.ciudadService.getCiudades().subscribe(
+      ciudades => this.ciudades = ciudades
+    );
   }
 
 }

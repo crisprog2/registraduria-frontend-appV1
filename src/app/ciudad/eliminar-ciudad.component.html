@@ -1,1 +1,36 @@
-<p>eliminar-ciudad works!</p>
+<div class="card bg-dark text-white">
+  <div class="card-header">{{ titulo }}</div>
+  <div class="card-body">
+
+    <form>
+      <div class="form-group row">
+        <label for="codCiudad" class="col-form-label col-sm-2">Cod Ciudad</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="ciudad.codCiudad" name="codCiudad" contenteditable="false" disabled="disabled">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <label for="ciudad" class="col-form-label col-sm-2">Ciudad</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="ciudad.ciudad" name="ciudad" contenteditable="false" disabled="disabled">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <label for="departamento" class="col-form-label col-sm-2">Departamento</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="ciudad.departamento" name="departamento" contenteditable="false" disabled="disabled">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button" (click)='deleteCiudad()'>Eliminar Ciudad</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

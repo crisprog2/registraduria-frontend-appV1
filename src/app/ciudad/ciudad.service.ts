@@ -21,9 +21,19 @@ export class CiudadService {
   }
 
   createCiudad(ciudad: Ciudad) : Observable<Ciudad>{
-    return this.http.post<Ciudad>(
-      this.urlEndPoint2, ciudad, {headers : this.httpHeaders}
-    );
+    return this.http.post<Ciudad>(this.urlEndPoint2, ciudad, {headers : this.httpHeaders});
+  }
+
+  getCiudad(id: any) : Observable<Ciudad>{
+    return this.http.get<Ciudad>(`${this.urlEndPoint2}/${id}`);
+  }
+
+  updateCiudad(ciudad: Ciudad):Observable<Ciudad>{
+    return this.http.put<Ciudad>(`${this.urlEndPoint2}/${ciudad.codCiudad}`, ciudad, {headers: this.httpHeaders});
+  }
+
+  deleteCiudad(id: any):Observable<Ciudad>{
+    return this.http.delete<Ciudad>(`${this.urlEndPoint2}/${id}`, {headers: this.httpHeaders});
   }
 
 }

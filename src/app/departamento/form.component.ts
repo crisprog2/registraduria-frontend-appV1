@@ -12,7 +12,7 @@ import swal from 'sweetalert2'
 export class FormComponent implements OnInit {
 
   public departamento: Departamento = new Departamento();
-  public titulo: string="Crear/Actualizar Departamento";
+  public titulo: string="Crear Departamento";
 
   constructor(private departamentoService: DepartamentoService, private router: Router, private activatedRoute: ActivatedRoute) { }
 

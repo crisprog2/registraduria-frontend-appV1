@@ -19,10 +19,7 @@
       <hr>
       <div class="form-group row">
         <div class="col-sm-6">
-          <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!departamento.codDepartamento else elseBlock">Crear Departamento</button>
-          <ng-template #elseBlock>
-            <button class="btn btn-primary" role="button" (click)='updateDepartamento()'>Actualizar Departamento</button>
-          </ng-template>
+          <button class="btn btn-primary" role="button" (click)='create()'>Crear Departamento</button>
         </div>
       </div>
 

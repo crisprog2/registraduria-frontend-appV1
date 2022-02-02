@@ -13,6 +13,7 @@ import { FormComponent } from './departamento/form.component';
 import { FormsModule } from '@angular/forms';
 import { ConsultarComponent } from './departamento/consultar.component';
 import { EliminarComponent } from './departamento/eliminar.component';
+import { CiudadComponent } from './ciudad/ciudad.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EliminarComponent } from './departamento/eliminar.component';
     DepartamentoComponent,
     FormComponent,
     ConsultarComponent,
-    EliminarComponent
+    EliminarComponent,
+    CiudadComponent
   ],
   imports: [
     BrowserModule,

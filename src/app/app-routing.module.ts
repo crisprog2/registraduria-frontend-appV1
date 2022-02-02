@@ -8,6 +8,8 @@ import { EliminarComponent } from './departamento/eliminar.component';
 import { CiudadComponent } from './ciudad/ciudad.component';
 import { FormciudadComponent } from './ciudad/formciudad.component';
 import { FormActualizarComponent } from './departamento/form-actualizar.component';
+import { FormActualizarCiudadComponent } from './ciudad/form-actualizar-ciudad.component';
+import { ConsultarCiudadComponent } from './ciudad/consultar-ciudad.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -17,7 +19,9 @@ const routes: Routes =[
   {path: 'departamentos/form/:id', component: FormActualizarComponent},
   {path: 'departamentos/eliminar/:id', component: EliminarComponent},
   {path: 'ciudades', component: CiudadComponent},
-  {path: 'ciudades/form', component: FormciudadComponent}
+  {path: 'ciudades/consultar', component: ConsultarCiudadComponent},
+  {path: 'ciudades/form', component: FormciudadComponent},
+  {path: 'ciudades/form/:id', component: FormActualizarCiudadComponent}
 ];
 
 @NgModule({

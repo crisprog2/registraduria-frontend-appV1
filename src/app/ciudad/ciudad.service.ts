@@ -9,7 +9,7 @@ import { Ciudad } from './ciudad';
 export class CiudadService {
 
   private urlEndPoint:string = 'http://localhost:8080/api/ciudades';
-  private urlEndPoint2:string = 'http://localhost:8080/api/departamento';
+  private urlEndPoint2:string = 'http://localhost:8080/api/ciudad';
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) { }

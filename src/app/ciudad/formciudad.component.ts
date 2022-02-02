@@ -34,8 +34,4 @@ export class FormciudadComponent implements OnInit {
     )
   }
 
-  public update(): void{
-    
-  }
-
 }

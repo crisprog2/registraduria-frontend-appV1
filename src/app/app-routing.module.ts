@@ -6,6 +6,7 @@ import { FormComponent } from './departamento/form.component';
 import { ConsultarComponent } from './departamento/consultar.component';
 import { EliminarComponent } from './departamento/eliminar.component';
 import { CiudadComponent } from './ciudad/ciudad.component';
+import { FormciudadComponent } from './ciudad/formciudad.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -15,7 +16,7 @@ const routes: Routes =[
   {path: 'departamentos/form/:id', component: FormComponent},
   {path: 'departamentos/eliminar/:id', component: EliminarComponent},
   {path: 'ciudades', component: CiudadComponent},
-  {path: 'ciudades/form', component: CiudadComponent}
+  {path: 'ciudades/form', component: FormciudadComponent}
 ];
 
 @NgModule({
